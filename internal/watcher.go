@@ -12,7 +12,7 @@ import (
 )
 
 func RunWatcher() {
-	conn := ConnectToServer("ws://localhost:3000/ws/send/123")
+	conn := ConnectToServer("ws://localhost:3000/ws/send/123?token=fksjanjndajndsd9ydbseqoQ")
 	defer conn.Close()
 	_, cancel := context.WithTimeout(context.Background(), time.Second*2)
 	defer cancel()
